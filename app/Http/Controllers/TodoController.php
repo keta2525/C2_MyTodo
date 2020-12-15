@@ -74,7 +74,7 @@ class TodoController extends Controller
         return view('todo/edit', compact('todo'));
     }
 
-    /**
+     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
@@ -83,11 +83,14 @@ class TodoController extends Controller
      */
     public function update(CreateTodoRequest $request, $id)
     {
+        //フォームから送信されたタスクを置き換える
         $todo = Auth::user()->todos()->findOrFail($id);
         $todo->title = $request->title;
         $todo->due_date = $request->due_date;
+        $todo->status = $request->status;
         $todo->save();
 
+        //タスク単体ページにリダイレクト
         return redirect()->to('/todo/' . $todo->id);
     }
 
