@@ -12,7 +12,7 @@
 
 <div class="container">
     <div class="col-md-12">
-        <h1 class="text-center text-primary py-3">TODO App</h1>
+        <h1 class="text-center text-primary py-3">YUMOTO TODO</h1>
 
         <h2 class="text-muted py-3">{{ $todo->title }}</h2>
         <table class="table">

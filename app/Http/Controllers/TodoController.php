@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Auth;
 class TodoController extends Controller
 {
     // ページネーションの件数
-    private const PAGE_SIZE = 5;
+    private const PAGE_SIZE = 10;
 
     /**
      * Display a listing of the resource.
